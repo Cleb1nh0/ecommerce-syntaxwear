@@ -1,5 +1,4 @@
-/* base.css — LIMPO ✅
-   Conteúdo removido conforme solicitado.
-   Adicione estilos quando necessário.
-*/
+body {
+   font-family: var(--fonte-principal)
+}
 
