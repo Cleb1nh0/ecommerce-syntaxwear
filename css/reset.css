@@ -1,0 +1,111 @@
+/* reset.css — Reset moderno (inspirado em Andy Bell)
+   Uso: importe este arquivo ANTES dos seus outros estilos base.
+   Objetivo: box-sizing consistente, remoção de margens/padding nativas,
+   melhorar comportamento de mídias, formulários e respeito por "prefers-reduced-motion".
+*/
+
+/* 1) Modelo de caixa mais intuitivo */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2) Remover margens e padding padrões de elementos comuns */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* 3) Garantir que os elementos HTML5 fiquem como blocos em navegadores antigos */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* 4) Altura base para permitir layouts com 100% */
+html, body {
+  height: 100%;
+}
+
+/* 5) Configurações base para o body */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  color: #111;
+  text-rendering: optimizeLegibility;
+}
+
+/* 6) Mídias: comportamentos mais previsíveis */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 7) Formularios: herdar tipografia */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8) Listas sem estilo */
+ol, ul {
+  list-style: none;
+}
+
+/* 9) Links e botões básicos */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* 10) Evitar estouro de texto */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 11) Contexto de empilhamento para apps SPA */
+#root, #app {
+  isolation: isolate;
+}
+
+/* 12) Preferências de redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 13) Foco acessível (estilo mínimo, pode ser substituído pelo projeto) */
+:focus {
+  outline: 2px dashed transparent;
+  outline-offset: 2px;
+}
+:focus-visible {
+  outline: 2px solid Highlight;
+}
